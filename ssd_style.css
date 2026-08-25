@@ -84,18 +84,13 @@ h3 {
 
 
 /* =========================================================
-   3. NAVIGATION BAR
+   NAVIGATION
    ========================================================= */
 
-/*
-   This targets the second row of the original
-   top-level table — the existing navigation.
-*/
-
 body > table:first-of-type tr:nth-child(2) td {
-    background: rgba(255, 255, 255, 0.92) !important;
+    background: white !important;
 
-    padding: 18px 20px !important;
+    padding: 16px 20px !important;
 
     border-radius: 14px !important;
 
@@ -112,8 +107,6 @@ body > table:first-of-type tr:nth-child(2) td {
 }
 
 
-/* Navigation links */
-
 body > table:first-of-type tr:nth-child(2) a {
     display: inline-block;
 
@@ -123,11 +116,11 @@ body > table:first-of-type tr:nth-child(2) a {
 
     border: 1px solid #bfdbfe;
 
-    padding: 9px 15px;
+    padding: 9px 16px;
 
-    margin: 4px 3px;
+    margin: 4px;
 
-    border-radius: 25px;
+    border-radius: 22px;
 
     text-decoration: none !important;
 
@@ -139,14 +132,8 @@ body > table:first-of-type tr:nth-child(2) a {
 }
 
 
-/* Navigation hover */
-
 body > table:first-of-type tr:nth-child(2) a:hover {
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #1d4ed8
-    ) !important;
+    background: #2563eb !important;
 
     color: white !important;
 
@@ -155,20 +142,8 @@ body > table:first-of-type tr:nth-child(2) a:hover {
     transform: translateY(-3px);
 
     box-shadow:
-        0 5px 12px rgba(37, 99, 235, 0.3);
+        0 5px 12px rgba(37, 99, 235, 0.30);
 }
-
-
-/* Hide the ugly text separators visually */
-
-body > table:first-of-type tr:nth-child(2) td {
-    font-size: 0;
-}
-
-body > table:first-of-type tr:nth-child(2) a {
-    font-size: 15px;
-}
-
 
 /* =========================================================
    4. ABOUT SECTION
@@ -178,49 +153,99 @@ body > table:first-of-type tr:nth-child(2) a {
    The third row is the existing About section.
 */
 
-body > table:first-of-type tr:nth-child(3) td {
-    background: linear-gradient(
-        135deg,
-        #eff6ff,
-        #f8fbff
-    ) !important;
-
-    border: 1px solid #bfdbfe;
-
-    border-left: 6px solid #2563eb;
-
-    border-radius: 16px !important;
-
-    padding: 30px 35px !important;
-
-    margin-top: 30px;
-
-    box-shadow:
-        0 8px 22px rgba(37, 99, 235, 0.10) !important;
-}
-
-
-/* About heading */
-
 #about {
     display: block;
 
     color: #172554 !important;
 
-    font-size: 27px;
+    font-size: 28px;
 
     font-weight: 700;
 
+    padding-bottom: 8px;
+
     margin-bottom: 18px;
+
+    border-bottom: 3px solid #bfdbfe;
+
+    background: none !important;
+
+    box-shadow: none !important;
+
+    border-radius: 0 !important;
 }
 
 
-/* About paragraphs */
+/* About content box */
 
-body > table:first-of-type tr:nth-child(3) p {
+body > table:first-of-type tr:nth-child(3) td p {
+    position: relative;
+
+    padding: 0 25px 25px 25px !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/*
+   Create a colored box behind the content
+   below the About heading.
+*/
+
+body > table:first-of-type tr:nth-child(3) td p::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 58px;
+
+    bottom: 0;
+
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #f8fbff
+    );
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 18px rgba(37, 99, 235, 0.08);
+
+    z-index: 0;
+}
+
+
+/* Keep the actual text above the colored box */
+
+body > table:first-of-type tr:nth-child(3) td p {
+    isolation: isolate;
+}
+
+
+/* Heading should remain above the box */
+
+#about {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* About text */
+
+body > table:first-of-type tr:nth-child(3) td p {
     line-height: 1.8;
-
-    margin: 0;
 }
 
 
@@ -232,69 +257,104 @@ body > table:first-of-type tr:nth-child(3) p {
    Fourth row = Lecture/Lab/Office Hours.
 */
 
-body > table:first-of-type tr:nth-child(4) td {
-    background: white !important;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 16px !important;
-
-    padding: 30px 35px !important;
-
-    margin-top: 30px;
-
-    box-shadow:
-        0 8px 22px rgba(15, 23, 42, 0.08) !important;
-}
-
-
-/* Lecture section heading */
-
 #lecture {
     display: block;
 
     color: #172554 !important;
 
-    font-size: 27px;
+    font-size: 28px;
 
     font-weight: 700;
 
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 
     margin-bottom: 20px;
 
-    border-bottom: 3px solid #dbeafe;
+    border-bottom: 3px solid #bfdbfe;
+
+    background: none !important;
+
+    box-shadow: none !important;
+
+    border-radius: 0 !important;
 }
 
 
-/* Lecture and lab list */
+/* Main lecture/lab content area */
+
+body > table:first-of-type tr:nth-child(4) td {
+    padding: 0 25px 25px 25px !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* Lecture/Lab list becomes the colored box */
 
 body > table:first-of-type tr:nth-child(4) ul {
-    background: #f8fafc;
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #f8fbff
+    ) !important;
+
+    border: 1px solid #bfdbfe;
 
     border-left: 5px solid #2563eb;
 
-    border-radius: 10px;
+    border-radius: 14px;
 
-    padding: 18px 25px 18px 45px;
+    padding: 22px 30px 22px 45px;
 
     margin: 20px 0 25px 0 !important;
+
+    box-shadow:
+        0 6px 18px rgba(37, 99, 235, 0.08);
 }
 
+
+/* Individual lecture/lab items */
 
 body > table:first-of-type tr:nth-child(4) li {
     margin-bottom: 12px !important;
 }
 
+body > table:first-of-type tr:nth-child(4) li:last-child {
+    margin-bottom: 0 !important;
+}
 
-/* Office Hours */
+
+/* Office hours becomes its own clean box */
 
 body > table:first-of-type tr:nth-child(4) p {
-    margin-top: 20px;
+    background-color: #ffffff !important;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    padding: 20px 25px !important;
+
+    margin-top: 25px !important;
+
+    box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.06);
 
     line-height: 1.8;
 }
 
+
+/* Office Hours label */
+
+body > table:first-of-type tr:nth-child(4) p b {
+    color: #1e3a8a !important;
+
+    font-size: 19px;
+}
 
 /* =========================================================
    6. COURSE POLICY
@@ -305,50 +365,22 @@ body > table:first-of-type tr:nth-child(4) p {
 
     color: #172554 !important;
 
-    font-size: 27px;
+    font-size: 28px;
 
     font-weight: 700;
 
-    border-left: 5px solid #2563eb;
+    padding-bottom: 8px;
 
-    padding-left: 14px;
+    margin-bottom: 20px;
+
+    border-bottom: 3px solid #bfdbfe;
+
+    background: none !important;
+
+    box-shadow: none !important;
+
+    border-radius: 0 !important;
 }
-
-
-/* Policy list */
-
-body > table:first-of-type tr:nth-child(5) ul {
-    background: white;
-
-    border-radius: 14px;
-
-    padding: 25px 30px 25px 50px;
-
-    box-shadow:
-        0 5px 16px rgba(15, 23, 42, 0.06);
-}
-
-
-body > table:first-of-type tr:nth-child(5) li {
-    margin-bottom: 18px !important;
-
-    padding-bottom: 12px;
-
-    border-bottom: 1px solid #e5e7eb;
-}
-
-
-body > table:first-of-type tr:nth-child(5) li:last-child {
-    border-bottom: none;
-}
-
-
-/* Policy titles */
-
-body > table:first-of-type tr:nth-child(5) li b {
-    color: #1e40af !important;
-}
-
 
 /* =========================================================
    7. GO TO TOP BUTTON
@@ -357,13 +389,19 @@ body > table:first-of-type tr:nth-child(5) li b {
 a[href="#home"] {
     display: inline-block;
 
-    background: #2563eb !important;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    ) !important;
 
     color: white !important;
 
-    padding: 6px 13px !important;
+    padding: 7px 15px !important;
 
     border-radius: 20px !important;
+
+    border: none !important;
 
     text-decoration: none !important;
 
@@ -374,25 +412,28 @@ a[href="#home"] {
     margin-left: 8px;
 
     box-shadow:
-        0 3px 8px rgba(37, 99, 235, 0.25);
+        0 4px 10px rgba(37, 99, 235, 0.25);
 
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 
 a[href="#home"]:hover {
-    background: #1d4ed8 !important;
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #1e40af
+    ) !important;
 
     color: white !important;
 
     transform: translateY(-2px);
 
     box-shadow:
-        0 5px 12px rgba(37, 99, 235, 0.35);
+        0 6px 14px rgba(37, 99, 235, 0.35);
 
     text-decoration: none !important;
 }
-
 
 /* =========================================================
    8. TABLES - LECTURES / LAB / GRADING
