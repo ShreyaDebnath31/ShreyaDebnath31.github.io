@@ -1,11 +1,5 @@
 /* =========================================================
-   CS6.302 - SOFTWARE SYSTEM DEVELOPMENT
-   CUSTOM CSS
-   ========================================================= */
-
-
-/* =========================================================
-   1. GENERAL PAGE
+   GLOBAL SETTINGS
    ========================================================= */
 
 html {
@@ -13,36 +7,49 @@ html {
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fb, #eaf1ff) !important;
+    background: linear-gradient(
+        135deg,
+        #f5f7fb,
+        #eaf1ff
+    ) !important;
+
     color: #263238 !important;
+
     font-family: "Quicksand", Arial, sans-serif !important;
+
     font-size: 18px !important;
+
     line-height: 1.7 !important;
+
     margin: 0 !important;
+
     padding: 25px !important;
 }
 
 
-/* Main page container */
+/* Keep the main page centered */
 
 body > table {
     width: 100% !important;
+
     max-width: 1150px !important;
+
     margin: 0 auto !important;
 }
 
 
 /* =========================================================
-   2. COURSE HEADER
+   COURSE HEADER
    ========================================================= */
 
 body > table:first-of-type tr:first-child td {
     padding: 0 0 25px 0 !important;
+
     text-align: center !important;
 }
 
 
-/* Main title */
+/* Main course title */
 
 h1 {
     background: linear-gradient(
@@ -66,7 +73,7 @@ h1 {
 
     box-shadow:
         0 12px 30px rgba(30, 64, 175, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+        inset 0 1px 0 rgba(255,255,255,0.25) !important;
 }
 
 
@@ -74,15 +81,20 @@ h1 {
 
 h3 {
     color: #2563eb !important;
+
     font-size: 22px !important;
+
     margin: 8px 0 !important;
-    font-weight: 500 !important;
+
+    font-weight: 500;
 }
 
 
 /* =========================================================
-   3. NAVIGATION BAR
+   NAVIGATION
    ========================================================= */
+
+/* Navigation container */
 
 body > table:first-of-type tr:nth-child(2) td {
     background: white !important;
@@ -96,15 +108,14 @@ body > table:first-of-type tr:nth-child(2) td {
 
     text-align: center !important;
 
-    position: sticky;
+    /* NOT sticky */
+    position: static !important;
 
-    top: 10px;
-
-    z-index: 1000;
+    z-index: auto !important;
 }
 
 
-/* Navigation links */
+/* Navigation buttons */
 
 body > table:first-of-type tr:nth-child(2) a {
     display: inline-block !important;
@@ -140,7 +151,7 @@ body > table:first-of-type tr:nth-child(2) a:hover {
 
     border-color: #2563eb !important;
 
-    transform: translateY(-3px);
+    transform: translateY(-3px) !important;
 
     box-shadow:
         0 5px 12px rgba(37, 99, 235, 0.30) !important;
@@ -148,235 +159,11 @@ body > table:first-of-type tr:nth-child(2) a:hover {
 
 
 /* =========================================================
-   4. ABOUT SECTION
+   GENERAL SECTION HEADINGS
    ========================================================= */
 
-/* About heading */
-
-#about {
-    display: block !important;
-
-    color: #172554 !important;
-
-    font-size: 28px !important;
-
-    font-weight: 700 !important;
-
-    padding-bottom: 8px !important;
-
-    margin-bottom: 18px !important;
-
-    border-bottom: 3px solid #bfdbfe !important;
-
-    background: transparent !important;
-
-    box-shadow: none !important;
-
-    border-radius: 0 !important;
-
-    position: relative !important;
-
-    z-index: 2 !important;
-}
-
-
-/* About paragraph */
-
-body > table:first-of-type tr:nth-child(3) td p {
-    position: relative !important;
-
-    padding: 0 25px 25px 25px !important;
-
-    background: transparent !important;
-
-    border: none !important;
-
-    box-shadow: none !important;
-
-    line-height: 1.8 !important;
-
-    isolation: isolate !important;
-}
-
-
-/* Colored box behind About content */
-
-body > table:first-of-type tr:nth-child(3) td p::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    top: 58px;
-    bottom: 0;
-
-    background: linear-gradient(
-        135deg,
-        #eff6ff,
-        #f8fbff
-    );
-
-    border: 1px solid #bfdbfe;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 6px 18px rgba(37, 99, 235, 0.08);
-
-    z-index: -1;
-}
-
-
-/* =========================================================
-   5. LECTURE / LAB / OFFICE HOURS
-   ========================================================= */
-
-/* Lecture/Lab heading */
-
-#lecture {
-    display: block !important;
-
-    color: #172554 !important;
-
-    font-size: 28px !important;
-
-    font-weight: 700 !important;
-
-    padding-bottom: 8px !important;
-
-    margin-bottom: 18px !important;
-
-    border-bottom: 3px solid #bfdbfe !important;
-
-    background: transparent !important;
-
-    box-shadow: none !important;
-
-    border-radius: 0 !important;
-
-    position: relative !important;
-
-    z-index: 2 !important;
-}
-
-
-/* Lecture/Lab introductory content */
-
-body > table:first-of-type tr:nth-child(4) td > p:first-of-type {
-    position: relative !important;
-
-    padding: 0 25px 25px 25px !important;
-
-    background: transparent !important;
-
-    border: none !important;
-
-    box-shadow: none !important;
-
-    line-height: 1.8 !important;
-
-    isolation: isolate !important;
-}
-
-
-/* Colored box behind lecture/lab introduction */
-
-body > table:first-of-type tr:nth-child(4) td > p:first-of-type::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-
-    top: 58px;
-    bottom: 0;
-
-    background: linear-gradient(
-        135deg,
-        #eff6ff,
-        #f8fbff
-    );
-
-    border: 1px solid #bfdbfe;
-
-    border-radius: 14px;
-
-    box-shadow:
-        0 6px 18px rgba(37, 99, 235, 0.08);
-
-    z-index: -1;
-}
-
-
-/* Lecture/Lab list */
-
-body > table:first-of-type tr:nth-child(4) td ul {
-    background: white !important;
-
-    border: 1px solid #dbeafe !important;
-
-    border-left: 5px solid #2563eb !important;
-
-    border-radius: 12px !important;
-
-    padding: 18px 30px 18px 45px !important;
-
-    margin: 20px 0 !important;
-
-    box-shadow:
-        0 4px 12px rgba(37, 99, 235, 0.06) !important;
-}
-
-
-/* List items */
-
-body > table:first-of-type tr:nth-child(4) li {
-    margin-bottom: 12px !important;
-}
-
-body > table:first-of-type tr:nth-child(4) li:last-child {
-    margin-bottom: 0 !important;
-}
-
-
-/* Office Hours paragraph */
-
-body > table:first-of-type tr:nth-child(4) td > p:last-of-type {
-    background: white !important;
-
-    border: 1px solid #dbeafe !important;
-
-    border-left: 5px solid #60a5fa !important;
-
-    border-radius: 12px !important;
-
-    padding: 18px 25px !important;
-
-    margin-top: 25px !important;
-
-    box-shadow:
-        0 4px 12px rgba(15, 23, 42, 0.06) !important;
-
-    line-height: 1.8 !important;
-}
-
-
-/* Office Hours title */
-
-body > table:first-of-type tr:nth-child(4) td > p:last-of-type b {
-    color: #1e3a8a !important;
-
-    font-size: 20px !important;
-}
-
-
-/* =========================================================
-   6. COURSE POLICY
-   ========================================================= */
-
+#about,
+#lecture,
 #cpolicy {
     display: block !important;
 
@@ -388,11 +175,13 @@ body > table:first-of-type tr:nth-child(4) td > p:last-of-type b {
 
     padding-bottom: 8px !important;
 
+    margin-top: 35px !important;
+
     margin-bottom: 20px !important;
 
     border-bottom: 3px solid #bfdbfe !important;
 
-    background: transparent !important;
+    background: none !important;
 
     box-shadow: none !important;
 
@@ -400,9 +189,75 @@ body > table:first-of-type tr:nth-child(4) td > p:last-of-type b {
 }
 
 
-/* Course Policy list */
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
 
-body > table:first-of-type tr:nth-child(5) td ul {
+body > table:first-of-type tr:nth-child(3) td {
+    padding: 0 25px 25px 25px !important;
+}
+
+
+/* About paragraphs */
+
+body > table:first-of-type tr:nth-child(3) td p {
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #f8fbff
+    ) !important;
+
+    border: 1px solid #bfdbfe !important;
+
+    border-radius: 14px !important;
+
+    padding: 25px !important;
+
+    margin: 20px 0 !important;
+
+    box-shadow:
+        0 6px 18px rgba(37, 99, 235, 0.08) !important;
+
+    line-height: 1.8 !important;
+}
+
+
+/* =========================================================
+   LECTURE / LAB / OFFICE HOURS
+   ========================================================= */
+
+body > table:first-of-type tr:nth-child(4) td {
+    padding: 0 25px 30px 25px !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* Lecture/Lab main description */
+
+body > table:first-of-type tr:nth-child(4) td > p:first-child {
+    background: white !important;
+
+    border: 1px solid #e2e8f0 !important;
+
+    border-radius: 14px !important;
+
+    padding: 25px !important;
+
+    margin: 20px 0 !important;
+
+    box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.06) !important;
+}
+
+
+/* Lecture/Lab schedule box */
+
+body > table:first-of-type tr:nth-child(4) ul {
     background: linear-gradient(
         135deg,
         #eff6ff,
@@ -415,42 +270,106 @@ body > table:first-of-type tr:nth-child(5) td ul {
 
     border-radius: 14px !important;
 
-    padding: 25px 35px 25px 50px !important;
+    padding: 22px 30px 22px 45px !important;
 
-    margin: 20px 0 30px 0 !important;
+    margin: 25px 0 !important;
 
     box-shadow:
         0 6px 18px rgba(37, 99, 235, 0.08) !important;
 }
 
 
-/* Policy items */
+/* Individual schedule items */
 
-body > table:first-of-type tr:nth-child(5) td ul li {
-    margin-bottom: 18px !important;
+body > table:first-of-type tr:nth-child(4) li {
+    margin-bottom: 12px !important;
+}
 
-    padding-bottom: 15px !important;
-
-    border-bottom: 1px solid #dbeafe !important;
+body > table:first-of-type tr:nth-child(4) li:last-child {
+    margin-bottom: 0 !important;
 }
 
 
-body > table:first-of-type tr:nth-child(5) td ul li:last-child {
+/* Office Hours box */
+
+body > table:first-of-type tr:nth-child(4) p:last-child {
+    background: white !important;
+
+    border: 1px solid #e2e8f0 !important;
+
+    border-radius: 14px !important;
+
+    padding: 20px 25px !important;
+
+    margin-top: 25px !important;
+
+    box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.06) !important;
+
+    line-height: 1.8 !important;
+}
+
+
+/* Office Hours label */
+
+body > table:first-of-type tr:nth-child(4) p b {
+    color: #1e3a8a !important;
+
+    font-size: 19px !important;
+}
+
+
+/* =========================================================
+   COURSE POLICY
+   ========================================================= */
+
+body > table:first-of-type tr:nth-child(5) {
+    margin-top: 30px !important;
+}
+
+
+/* Course policy content */
+
+body > table:first-of-type tr:nth-child(5) td {
+    padding: 0 35px 30px 35px !important;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fbff
+    ) !important;
+
+    border-left: 6px solid #2563eb !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 7px 20px rgba(15, 23, 42, 0.08) !important;
+}
+
+
+/* Policy list */
+
+body > table:first-of-type tr:nth-child(5) li {
+    margin-bottom: 22px !important;
+
+    padding-bottom: 18px !important;
+
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+
+/* Remove border from final item */
+
+body > table:first-of-type tr:nth-child(5) li:last-child {
     border-bottom: none !important;
 
     margin-bottom: 0 !important;
 }
 
 
-/* Policy titles */
-
-body > table:first-of-type tr:nth-child(5) td ul li b {
-    color: #1e3a8a !important;
-}
-
-
 /* =========================================================
-   7. GO TO TOP BUTTON
+   GO TO TOP BUTTON
    ========================================================= */
 
 a[href="#home"] {
@@ -464,7 +383,7 @@ a[href="#home"] {
 
     color: white !important;
 
-    padding: 7px 16px !important;
+    padding: 8px 16px !important;
 
     border-radius: 20px !important;
 
@@ -485,6 +404,8 @@ a[href="#home"] {
 }
 
 
+/* Go to top hover */
+
 a[href="#home"]:hover {
     background: linear-gradient(
         135deg,
@@ -504,23 +425,27 @@ a[href="#home"]:hover {
 
 
 /* =========================================================
-   8. TABLES
+   COURSE TABLES
    ========================================================= */
 
-table[border="1"] {
+/* Main course tables */
+
+body > table:first-of-type table {
     width: 95% !important;
 
     margin: 40px auto !important;
 
-    background-color: white !important;
+    background: white !important;
 
-    border-collapse: collapse !important;
+    border-collapse: separate !important;
+
+    border-spacing: 0 !important;
 
     border: none !important;
 
     border-radius: 14px !important;
 
-    overflow: hidden;
+    overflow: hidden !important;
 
     box-shadow:
         0 8px 22px rgba(15, 23, 42, 0.10) !important;
@@ -529,7 +454,7 @@ table[border="1"] {
 
 /* Table headers */
 
-table[border="1"] th {
+body > table:first-of-type table th {
     background: linear-gradient(
         135deg,
         #1e3a8a,
@@ -538,7 +463,7 @@ table[border="1"] th {
 
     color: white !important;
 
-    padding: 15px 12px !important;
+    padding: 15px 14px !important;
 
     font-weight: 700 !important;
 
@@ -550,76 +475,57 @@ table[border="1"] th {
 
 /* Table cells */
 
-table[border="1"] td {
+body > table:first-of-type table td {
     padding: 13px 15px !important;
 
     border-bottom: 1px solid #e2e8f0 !important;
+
+    border-left: none !important;
+
+    border-right: none !important;
+
+    text-align: center !important;
 }
 
 
 /* Alternating rows */
 
-table[border="1"] tr:nth-child(even) {
+body > table:first-of-type table tr:nth-child(even) {
     background-color: #f8fafc !important;
 }
 
 
-/* Row hover */
+/* Table hover */
 
-table[border="1"] tr:hover {
-    background-color: #dbeafe !important;
+body > table:first-of-type table tr:hover {
+    background-color: #eff6ff !important;
 
-    transition: 0.2s ease;
-
-    box-shadow: inset 4px 0 0 #2563eb;
+    transition: background-color 0.2s ease !important;
 }
 
 
-/* Material links */
+/* Links inside tables */
 
-table[border="1"] a {
-    display: inline-block !important;
-
-    background: #eff6ff !important;
-
-    color: #1d4ed8 !important;
-
-    padding: 5px 10px !important;
-
-    border-radius: 6px !important;
+body > table:first-of-type table a {
+    color: #2563eb !important;
 
     text-decoration: none !important;
 
-    font-size: 14px !important;
+    font-weight: 600 !important;
 
-    font-weight: 700 !important;
-
-    margin: 2px !important;
-
-    transition: 0.2s ease !important;
+    transition: all 0.2s ease !important;
 }
 
 
-table[border="1"] a:hover {
-    background: #2563eb !important;
+body > table:first-of-type table a:hover {
+    color: #1d4ed8 !important;
 
-    color: white !important;
-
-    transform: translateY(-1px);
+    text-decoration: underline !important;
 }
 
 
 /* =========================================================
-   9. GENERAL LINKS
-   ========================================================= */
-
-a {
-    transition: all 0.2s ease;
-}
-
-
-/* =========================================================
-   10. HORIZONTAL LINES
+   HORIZONTAL SEPARATORS
    ========================================================= */
 
 hr {
@@ -639,7 +545,69 @@ hr {
 
 
 /* =========================================================
-   11. RESPONSIVE DESIGN
+   GENERAL LINKS
+   ========================================================= */
+
+a {
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   IMPORTANT LINKS
+   ========================================================= */
+
+body > table:first-of-type a {
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -663,8 +631,10 @@ hr {
     }
 
 
+    /* Navigation on mobile */
+
     body > table:first-of-type tr:nth-child(2) td {
-        position: static;
+        position: static !important;
 
         padding: 12px !important;
     }
@@ -674,53 +644,86 @@ hr {
         font-size: 13px !important;
 
         padding: 7px 10px !important;
+
+        margin: 3px !important;
     }
 
+
+    /* Section headings */
 
     #about,
     #lecture,
     #cpolicy {
         font-size: 22px !important;
+
+        margin-top: 28px !important;
     }
 
 
-    body > table:first-of-type tr:nth-child(3) td p,
-    body > table:first-of-type tr:nth-child(4) td p {
-        padding-left: 18px !important;
+    /* Section content */
 
-        padding-right: 18px !important;
+    body > table:first-of-type tr:nth-child(3) td,
+    body > table:first-of-type tr:nth-child(4) td {
+        padding: 15px !important;
     }
 
 
-    body > table:first-of-type tr:nth-child(4) td ul {
-        padding-left: 35px !important;
+    /* About */
 
-        padding-right: 20px !important;
+    body > table:first-of-type tr:nth-child(3) td p {
+        padding: 18px !important;
+
+        font-size: 16px !important;
     }
 
 
-    body > table:first-of-type tr:nth-child(5) td ul {
-        padding-left: 35px !important;
+    /* Lecture/Lab */
 
-        padding-right: 20px !important;
+    body > table:first-of-type tr:nth-child(4) td > p:first-child {
+        padding: 18px !important;
     }
 
 
-    table[border="1"] {
+    body > table:first-of-type tr:nth-child(4) ul {
+        padding: 18px 20px 18px 35px !important;
+
+        font-size: 16px !important;
+    }
+
+
+    /* Course policy */
+
+    body > table:first-of-type tr:nth-child(5) td {
+        padding: 15px 20px 25px 25px !important;
+    }
+
+
+    /* Tables */
+
+    body > table:first-of-type table {
         width: 100% !important;
 
         font-size: 14px !important;
 
-        display: block;
+        display: block !important;
 
-        overflow-x: auto;
+        overflow-x: auto !important;
     }
 
 
-    table[border="1"] th,
-    table[border="1"] td {
+    body > table:first-of-type table th,
+    body > table:first-of-type table td {
         padding: 9px !important;
 
-        white-space: nowrap;
+        white-space: nowrap !important;
+    }
+
+
+    /* Go to top */
+
+    a[href="#home"] {
+        padding: 7px 12px !important;
+
+        font-size: 12px !important;
     }
 }
