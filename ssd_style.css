@@ -1,5 +1,3 @@
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -25,7 +23,6 @@ body {
 }
 
 
-/* Keep the main page centered */
 
 body > table {
     width: 100% !important;
@@ -36,18 +33,12 @@ body > table {
 }
 
 
-/* =========================================================
-   COURSE HEADER
-   ========================================================= */
-
 body > table:first-of-type tr:first-child td {
     padding: 0 0 25px 0 !important;
 
     text-align: center !important;
 }
 
-
-/* Main course title */
 
 h1 {
     background: linear-gradient(
@@ -74,9 +65,6 @@ h1 {
         inset 0 1px 0 rgba(255,255,255,0.25) !important;
 }
 
-
-/* Subtitle */
-
 h3 {
     color: #2563eb !important;
 
@@ -86,13 +74,6 @@ h3 {
 
     font-weight: 500;
 }
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-/* Navigation container */
 
 body > table:first-of-type tr:nth-child(2) td {
     background: white !important;
@@ -106,14 +87,12 @@ body > table:first-of-type tr:nth-child(2) td {
 
     text-align: center !important;
 
-    /* NOT sticky */
     position: static !important;
 
     z-index: auto !important;
 }
 
 
-/* Navigation buttons */
 
 body > table:first-of-type tr:nth-child(2) a {
     display: inline-block !important;
@@ -140,8 +119,6 @@ body > table:first-of-type tr:nth-child(2) a {
 }
 
 
-/* Navigation hover */
-
 body > table:first-of-type tr:nth-child(2) a:hover {
     background: #2563eb !important;
 
@@ -156,9 +133,6 @@ body > table:first-of-type tr:nth-child(2) a:hover {
 }
 
 
-/* =========================================================
-   GENERAL SECTION HEADINGS
-   ========================================================= */
 
 #about,
 #lecture,
@@ -187,16 +161,12 @@ body > table:first-of-type tr:nth-child(2) a:hover {
 }
 
 
-/* =========================================================
-   ABOUT SECTION
-   ========================================================= */
 
 body > table:first-of-type tr:nth-child(3) td {
     padding: 0 25px 25px 25px !important;
 }
 
 
-/* About paragraphs */
 
 body > table:first-of-type tr:nth-child(3) td p {
     background: linear-gradient(
@@ -220,10 +190,6 @@ body > table:first-of-type tr:nth-child(3) td p {
 }
 
 
-/* =========================================================
-   LECTURE / LAB / OFFICE HOURS
-   ========================================================= */
-
 body > table:first-of-type tr:nth-child(4) td {
     padding: 0 25px 30px 25px !important;
 
@@ -235,7 +201,6 @@ body > table:first-of-type tr:nth-child(4) td {
 }
 
 
-/* Lecture/Lab main description */
 
 body > table:first-of-type tr:nth-child(4) td > p:first-child {
     background: white !important;
@@ -253,7 +218,6 @@ body > table:first-of-type tr:nth-child(4) td > p:first-child {
 }
 
 
-/* Lecture/Lab schedule box */
 
 body > table:first-of-type tr:nth-child(4) ul {
     background: linear-gradient(
@@ -277,7 +241,6 @@ body > table:first-of-type tr:nth-child(4) ul {
 }
 
 
-/* Individual schedule items */
 
 body > table:first-of-type tr:nth-child(4) li {
     margin-bottom: 12px !important;
@@ -288,7 +251,6 @@ body > table:first-of-type tr:nth-child(4) li:last-child {
 }
 
 
-/* Office Hours box */
 
 body > table:first-of-type tr:nth-child(4) p:last-child {
     background: white !important;
@@ -308,8 +270,6 @@ body > table:first-of-type tr:nth-child(4) p:last-child {
 }
 
 
-/* Office Hours label */
-
 body > table:first-of-type tr:nth-child(4) p b {
     color: #1e3a8a !important;
 
@@ -317,16 +277,12 @@ body > table:first-of-type tr:nth-child(4) p b {
 }
 
 
-/* =========================================================
-   COURSE POLICY
-   ========================================================= */
 
 body > table:first-of-type tr:nth-child(5) {
     margin-top: 30px !important;
 }
 
 
-/* Course policy content */
 
 body > table:first-of-type tr:nth-child(5) td {
     padding: 0 35px 30px 35px !important;
@@ -346,7 +302,6 @@ body > table:first-of-type tr:nth-child(5) td {
 }
 
 
-/* Policy list */
 
 body > table:first-of-type tr:nth-child(5) li {
     margin-bottom: 22px !important;
@@ -357,8 +312,6 @@ body > table:first-of-type tr:nth-child(5) li {
 }
 
 
-/* Remove border from final item */
-
 body > table:first-of-type tr:nth-child(5) li:last-child {
     border-bottom: none !important;
 
@@ -366,9 +319,6 @@ body > table:first-of-type tr:nth-child(5) li:last-child {
 }
 
 
-/* =========================================================
-   GO TO TOP BUTTON
-   ========================================================= */
 
 a[href="#home"] {
     display: inline-block !important;
@@ -401,9 +351,6 @@ a[href="#home"] {
     transition: all 0.25s ease !important;
 }
 
-
-/* Go to top hover */
-
 a[href="#home"]:hover {
     background: linear-gradient(
         135deg,
@@ -421,12 +368,6 @@ a[href="#home"]:hover {
     text-decoration: none !important;
 }
 
-
-/* =========================================================
-   COURSE TABLES
-   ========================================================= */
-
-/* Main course tables */
 
 body > table:first-of-type table {
     width: 95% !important;
@@ -450,7 +391,6 @@ body > table:first-of-type table {
 }
 
 
-/* Table headers */
 
 body > table:first-of-type table th {
     background: linear-gradient(
@@ -471,7 +411,6 @@ body > table:first-of-type table th {
 }
 
 
-/* Table cells */
 
 body > table:first-of-type table td {
     padding: 13px 15px !important;
@@ -486,14 +425,12 @@ body > table:first-of-type table td {
 }
 
 
-/* Alternating rows */
 
 body > table:first-of-type table tr:nth-child(even) {
     background-color: #f8fafc !important;
 }
 
 
-/* Table hover */
 
 body > table:first-of-type table tr:hover {
     background-color: #eff6ff !important;
@@ -502,7 +439,6 @@ body > table:first-of-type table tr:hover {
 }
 
 
-/* Links inside tables */
 
 body > table:first-of-type table a {
     color: #2563eb !important;
@@ -522,9 +458,6 @@ body > table:first-of-type table a:hover {
 }
 
 
-/* =========================================================
-   HORIZONTAL SEPARATORS
-   ========================================================= */
 
 hr {
     border: none !important;
@@ -542,27 +475,16 @@ hr {
 }
 
 
-/* =========================================================
-   GENERAL LINKS
-   ========================================================= */
-
 a {
     transition: all 0.2s ease;
 }
 
 
-/* =========================================================
-   IMPORTANT LINKS
-   ========================================================= */
 
 body > table:first-of-type a {
     transition: all 0.2s ease;
 }
 
-
-/* =========================================================
-   IMAGES
-   ========================================================= */
 
 img {
     max-width: 100%;
@@ -576,9 +498,6 @@ img {
 }
 
 
-/* =========================================================
-   BUTTONS
-   ========================================================= */
 
 button {
     background-color: #2563eb;
@@ -604,9 +523,6 @@ button:hover {
 }
 
 
-/* =========================================================
-   RESPONSIVE DESIGN
-   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -629,8 +545,6 @@ button:hover {
     }
 
 
-    /* Navigation on mobile */
-
     body > table:first-of-type tr:nth-child(2) td {
         position: static !important;
 
@@ -647,7 +561,6 @@ button:hover {
     }
 
 
-    /* Section headings */
 
     #about,
     #lecture,
@@ -658,15 +571,12 @@ button:hover {
     }
 
 
-    /* Section content */
 
     body > table:first-of-type tr:nth-child(3) td,
     body > table:first-of-type tr:nth-child(4) td {
         padding: 15px !important;
     }
 
-
-    /* About */
 
     body > table:first-of-type tr:nth-child(3) td p {
         padding: 18px !important;
@@ -675,7 +585,6 @@ button:hover {
     }
 
 
-    /* Lecture/Lab */
 
     body > table:first-of-type tr:nth-child(4) td > p:first-child {
         padding: 18px !important;
@@ -689,14 +598,13 @@ button:hover {
     }
 
 
-    /* Course policy */
 
     body > table:first-of-type tr:nth-child(5) td {
         padding: 15px 20px 25px 25px !important;
     }
 
 
-    /* Tables */
+
 
     body > table:first-of-type table {
         width: 100% !important;
@@ -717,7 +625,6 @@ button:hover {
     }
 
 
-    /* Go to top */
 
     a[href="#home"] {
         padding: 7px 12px !important;
