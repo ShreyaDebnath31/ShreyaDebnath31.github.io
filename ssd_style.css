@@ -1,185 +1,610 @@
+/* =========================================================
+   CS6.302 - SOFTWARE SYSTEM DEVELOPMENT
+   Custom CSS
+   ========================================================= */
 
-**must NOT be inside a CSS file.** They are Markdown formatting, not CSS.
 
-### 2. Let's make the external CSS definitely override the original CSS
+/* =========================================================
+   1. GENERAL PAGE
+   ========================================================= */
 
-Your `@import` is correctly placed first, so the approach itself is fine. We'll clean the CSS and use `!important` only where the original page's CSS is likely to compete.
+html {
+    scroll-behavior: smooth;
+}
 
----
-
-# Do this now
-
-Open **`ssd_style.css`**, select **everything**, delete it, and paste this clean version.
-
-```css
-/* =========================================
-   SSD COURSE PAGE - CUSTOM STYLING
-   ========================================= */
-
-/* Overall page */
 body {
-    background-color: #f4f7fb !important;
+    background: linear-gradient(135deg, #f5f7fb, #eaf1ff) !important;
+
     color: #263238 !important;
-    font-family: Arial, sans-serif !important;
+
+    font-family: "Quicksand", Arial, sans-serif !important;
+
     font-size: 18px !important;
-    line-height: 1.6 !important;
+
+    line-height: 1.7 !important;
+
     margin: 0 !important;
-    padding: 20px !important;
+
+    padding: 25px !important;
 }
 
 
-/* Main heading */
-h1 {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb) !important;
-    color: white !important;
-    padding: 30px !important;
-    border-radius: 12px !important;
+/* Keep the main page centered */
+
+body > table {
+    width: 100% !important;
+
+    max-width: 1150px !important;
+
+    margin: 0 auto !important;
+}
+
+
+/* =========================================================
+   2. COURSE HEADER
+   ========================================================= */
+
+body > table:first-of-type tr:first-child td {
+    padding: 0 0 25px 0 !important;
+
     text-align: center !important;
-    margin: 20px auto !important;
-    max-width: 1100px !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
 }
 
 
-/* Section headings */
-h2 {
-    color: #1e3a8a !important;
-    border-left: 5px solid #2563eb !important;
-    padding-left: 12px !important;
-    margin-top: 35px !important;
-    margin-bottom: 20px !important;
+/* Main course title */
+
+h1 {
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #2563eb,
+        #3b82f6
+    ) !important;
+
+    color: white !important;
+
+    padding: 35px 25px !important;
+
+    border-radius: 18px !important;
+
+    margin: 0 auto 20px auto !important;
+
+    font-size: 38px !important;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 12px 30px rgba(30, 64, 175, 0.25),
+        inset 0 1px 0 rgba(255,255,255,0.25) !important;
 }
+
+
+/* Subtitle */
 
 h3 {
     color: #2563eb !important;
-    margin-top: 25px !important;
+
+    font-size: 22px !important;
+
+    margin: 8px 0 !important;
+
+    font-weight: 500;
 }
 
 
-/* Links */
-a {
-    color: #2563eb !important;
+/* =========================================================
+   3. NAVIGATION BAR
+   ========================================================= */
+
+/*
+   This targets the second row of the original
+   top-level table — the existing navigation.
+*/
+
+body > table:first-of-type tr:nth-child(2) td {
+    background: rgba(255, 255, 255, 0.92) !important;
+
+    padding: 18px 20px !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.08) !important;
+
+    text-align: center !important;
+
+    position: sticky;
+
+    top: 10px;
+
+    z-index: 1000;
+}
+
+
+/* Navigation links */
+
+body > table:first-of-type tr:nth-child(2) a {
+    display: inline-block;
+
+    color: #1e3a8a !important;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    padding: 9px 15px;
+
+    margin: 4px 3px;
+
+    border-radius: 25px;
+
     text-decoration: none !important;
-    font-weight: 600 !important;
-    transition: 0.2s !important;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: all 0.25s ease;
 }
 
-a:hover {
-    color: #1d4ed8 !important;
-    text-decoration: underline !important;
+
+/* Navigation hover */
+
+body > table:first-of-type tr:nth-child(2) a:hover {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    ) !important;
+
+    color: white !important;
+
+    border-color: #2563eb;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.3);
 }
 
 
-/* Tables */
-table {
+/* Hide the ugly text separators visually */
+
+body > table:first-of-type tr:nth-child(2) td {
+    font-size: 0;
+}
+
+body > table:first-of-type tr:nth-child(2) a {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   4. ABOUT SECTION
+   ========================================================= */
+
+/*
+   The third row is the existing About section.
+*/
+
+body > table:first-of-type tr:nth-child(3) td {
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #f8fbff
+    ) !important;
+
+    border: 1px solid #bfdbfe;
+
+    border-left: 6px solid #2563eb;
+
+    border-radius: 16px !important;
+
+    padding: 30px 35px !important;
+
+    margin-top: 30px;
+
+    box-shadow:
+        0 8px 22px rgba(37, 99, 235, 0.10) !important;
+}
+
+
+/* About heading */
+
+#about {
+    display: block;
+
+    color: #172554 !important;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* About paragraphs */
+
+body > table:first-of-type tr:nth-child(3) p {
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   5. LECTURE / LAB / OFFICE HOURS
+   ========================================================= */
+
+/*
+   Fourth row = Lecture/Lab/Office Hours.
+*/
+
+body > table:first-of-type tr:nth-child(4) td {
+    background: white !important;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px !important;
+
+    padding: 30px 35px !important;
+
+    margin-top: 30px;
+
+    box-shadow:
+        0 8px 22px rgba(15, 23, 42, 0.08) !important;
+}
+
+
+/* Lecture section heading */
+
+#lecture {
+    display: block;
+
+    color: #172554 !important;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 3px solid #dbeafe;
+}
+
+
+/* Lecture and lab list */
+
+body > table:first-of-type tr:nth-child(4) ul {
+    background: #f8fafc;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 10px;
+
+    padding: 18px 25px 18px 45px;
+
+    margin: 20px 0 25px 0 !important;
+}
+
+
+body > table:first-of-type tr:nth-child(4) li {
+    margin-bottom: 12px !important;
+}
+
+
+/* Office Hours */
+
+body > table:first-of-type tr:nth-child(4) p {
+    margin-top: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   6. COURSE POLICY
+   ========================================================= */
+
+#cpolicy {
+    display: inline-block;
+
+    color: #172554 !important;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    border-left: 5px solid #2563eb;
+
+    padding-left: 14px;
+}
+
+
+/* Policy list */
+
+body > table:first-of-type tr:nth-child(5) ul {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 25px 30px 25px 50px;
+
+    box-shadow:
+        0 5px 16px rgba(15, 23, 42, 0.06);
+}
+
+
+body > table:first-of-type tr:nth-child(5) li {
+    margin-bottom: 18px !important;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+body > table:first-of-type tr:nth-child(5) li:last-child {
+    border-bottom: none;
+}
+
+
+/* Policy titles */
+
+body > table:first-of-type tr:nth-child(5) li b {
+    color: #1e40af !important;
+}
+
+
+/* =========================================================
+   7. GO TO TOP BUTTON
+   ========================================================= */
+
+a[href="#home"] {
+    display: inline-block;
+
+    background: #2563eb !important;
+
+    color: white !important;
+
+    padding: 6px 13px !important;
+
+    border-radius: 20px !important;
+
+    text-decoration: none !important;
+
+    font-size: 13px !important;
+
+    font-weight: 700 !important;
+
+    margin-left: 8px;
+
+    box-shadow:
+        0 3px 8px rgba(37, 99, 235, 0.25);
+
+    transition: all 0.2s ease;
+}
+
+
+a[href="#home"]:hover {
+    background: #1d4ed8 !important;
+
+    color: white !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(37, 99, 235, 0.35);
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   8. TABLES - LECTURES / LAB / GRADING
+   ========================================================= */
+
+table[border="1"] {
     width: 95% !important;
-    margin: 25px auto !important;
-    border-collapse: collapse !important;
+
+    margin: 40px auto !important;
+
     background-color: white !important;
-    border-radius: 10px !important;
-    overflow: hidden !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+
+    border-collapse: collapse !important;
+
+    border: none !important;
+
+    border-radius: 14px !important;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 22px rgba(15, 23, 42, 0.10) !important;
 }
 
 
 /* Table headers */
+
 th {
-    background-color: #1e3a8a !important;
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    ) !important;
+
     color: white !important;
-    padding: 14px !important;
-    text-align: left !important;
+
+    padding: 15px 12px !important;
+
+    font-weight: 700 !important;
+
+    border: none !important;
+
+    text-align: center !important;
 }
 
 
 /* Table cells */
+
 td {
-    padding: 12px !important;
-    border-bottom: 1px solid #e5e7eb !important;
-}
+    padding: 13px 15px !important;
 
-
-/* Table hover effect */
-tr:hover {
-    background-color: #eff6ff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
 }
 
 
 /* Alternating rows */
-tr:nth-child(even) {
+
+table[border="1"] tr:nth-child(even) {
     background-color: #f8fafc !important;
 }
 
 
-/* Lists */
-ul,
-ol {
-    margin-left: 25px !important;
-    margin-bottom: 20px !important;
-}
+/* Hover */
 
-li {
-    margin-bottom: 8px !important;
-}
+table[border="1"] tbody tr:hover {
+    background-color: #dbeafe !important;
 
+    transition: 0.2s;
 
-/* Important text */
-strong {
-    color: #1e3a8a !important;
+    box-shadow: inset 4px 0 0 #2563eb;
 }
 
 
-/* Horizontal lines */
+/* Material links */
+
+table[border="1"] a {
+    display: inline-block;
+
+    background: #eff6ff;
+
+    color: #1d4ed8 !important;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin: 2px;
+
+    transition: 0.2s;
+}
+
+
+table[border="1"] a:hover {
+    background: #2563eb !important;
+
+    color: white !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   9. HORIZONTAL SEPARATORS
+   ========================================================= */
+
 hr {
     border: none !important;
+
     height: 2px !important;
-    background-color: #dbeafe !important;
-    margin: 30px 0 !important;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #93c5fd,
+        transparent
+    ) !important;
+
+    margin: 35px 0 !important;
 }
 
 
-/* Images */
-img {
-    max-width: 100% !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12) !important;
+/* =========================================================
+   10. GENERAL LINKS
+   ========================================================= */
+
+a {
+    transition: all 0.2s ease;
 }
 
 
-/* Buttons */
-button {
-    background-color: #2563eb !important;
-    color: white !important;
-    border: none !important;
-    padding: 10px 18px !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-}
+/* =========================================================
+   11. RESPONSIVE DESIGN
+   ========================================================= */
 
-button:hover {
-    background-color: #1d4ed8 !important;
-}
-
-
-/* Responsive design */
 @media (max-width: 768px) {
 
     body {
         font-size: 16px !important;
-        padding: 8px !important;
+
+        padding: 10px !important;
     }
 
-    table {
-        width: 100% !important;
-        font-size: 14px !important;
+
+    h1 {
+        font-size: 27px !important;
+
+        padding: 25px 15px !important;
     }
+
+
+    h3 {
+        font-size: 18px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(2) td {
+        position: static;
+
+        padding: 12px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(2) a {
+        font-size: 13px;
+
+        padding: 7px 10px;
+    }
+
+
+    body > table:first-of-type tr:nth-child(3) td,
+    body > table:first-of-type tr:nth-child(4) td {
+        padding: 22px 20px !important;
+    }
+
+
+    #about,
+    #lecture,
+    #cpolicy {
+        font-size: 22px;
+    }
+
+
+    table[border="1"] {
+        width: 100% !important;
+
+        font-size: 14px !important;
+
+        display: block;
+
+        overflow-x: auto;
+    }
+
 
     th,
     td {
-        padding: 8px !important;
-    }
+        padding: 9px !important;
 
-    h1 {
-        font-size: 28px !important;
-        padding: 20px !important;
+        white-space: nowrap;
     }
 }
