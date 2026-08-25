@@ -1,3 +1,12 @@
+/* =========================================================
+   CS6.302 - SOFTWARE SYSTEM DEVELOPMENT
+   Custom CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. GENERAL PAGE
+   ========================================================= */
 
 html {
     scroll-behavior: smooth;
@@ -5,28 +14,20 @@ html {
 
 body {
     background: linear-gradient(135deg, #f5f7fb, #eaf1ff) !important;
-
     color: #263238 !important;
-
     font-family: "Quicksand", Arial, sans-serif !important;
-
     font-size: 18px !important;
-
     line-height: 1.7 !important;
-
     margin: 0 !important;
-
     padding: 25px !important;
 }
 
 
-/* Keep the main page centered */
+/* Keep main page centered */
 
 body > table {
     width: 100% !important;
-
     max-width: 1150px !important;
-
     margin: 0 auto !important;
 }
 
@@ -37,7 +38,6 @@ body > table {
 
 body > table:first-of-type tr:first-child td {
     padding: 0 0 25px 0 !important;
-
     text-align: center !important;
 }
 
@@ -66,25 +66,22 @@ h1 {
 
     box-shadow:
         0 12px 30px rgba(30, 64, 175, 0.25),
-        inset 0 1px 0 rgba(255,255,255,0.25) !important;
+        inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
 
 
-/* Subtitle */
+/* Course subtitle */
 
 h3 {
     color: #2563eb !important;
-
     font-size: 22px !important;
-
     margin: 8px 0 !important;
-
     font-weight: 500;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   3. NAVIGATION BAR
    ========================================================= */
 
 body > table:first-of-type tr:nth-child(2) td {
@@ -106,6 +103,8 @@ body > table:first-of-type tr:nth-child(2) td {
     z-index: 1000;
 }
 
+
+/* Navigation links */
 
 body > table:first-of-type tr:nth-child(2) a {
     display: inline-block;
@@ -132,6 +131,8 @@ body > table:first-of-type tr:nth-child(2) a {
 }
 
 
+/* Navigation hover */
+
 body > table:first-of-type tr:nth-child(2) a:hover {
     background: #2563eb !important;
 
@@ -145,13 +146,12 @@ body > table:first-of-type tr:nth-child(2) a:hover {
         0 5px 12px rgba(37, 99, 235, 0.30);
 }
 
+
 /* =========================================================
    4. ABOUT SECTION
    ========================================================= */
 
-/*
-   The third row is the existing About section.
-*/
+/* About heading */
 
 #about {
     display: block;
@@ -173,10 +173,14 @@ body > table:first-of-type tr:nth-child(2) a:hover {
     box-shadow: none !important;
 
     border-radius: 0 !important;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 
-/* About content box */
+/* About content */
 
 body > table:first-of-type tr:nth-child(3) td p {
     position: relative;
@@ -188,13 +192,14 @@ body > table:first-of-type tr:nth-child(3) td p {
     border: none !important;
 
     box-shadow: none !important;
+
+    isolation: isolate;
+
+    line-height: 1.8;
 }
 
 
-/*
-   Create a colored box behind the content
-   below the About heading.
-*/
+/* Colored box behind About content */
 
 body > table:first-of-type tr:nth-child(3) td p::after {
     content: "";
@@ -202,11 +207,9 @@ body > table:first-of-type tr:nth-child(3) td p::after {
     position: absolute;
 
     left: 0;
-
     right: 0;
 
     top: 58px;
-
     bottom: 0;
 
     background: linear-gradient(
@@ -222,30 +225,7 @@ body > table:first-of-type tr:nth-child(3) td p::after {
     box-shadow:
         0 6px 18px rgba(37, 99, 235, 0.08);
 
-    z-index: 0;
-}
-
-
-/* Keep the actual text above the colored box */
-
-body > table:first-of-type tr:nth-child(3) td p {
-    isolation: isolate;
-}
-
-
-/* Heading should remain above the box */
-
-#about {
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* About text */
-
-body > table:first-of-type tr:nth-child(3) td p {
-    line-height: 1.8;
+    z-index: -1;
 }
 
 
@@ -253,9 +233,7 @@ body > table:first-of-type tr:nth-child(3) td p {
    5. LECTURE / LAB / OFFICE HOURS
    ========================================================= */
 
-/*
-   Fourth row = Lecture/Lab/Office Hours.
-*/
+/* Main heading */
 
 #lecture {
     display: block;
@@ -293,7 +271,7 @@ body > table:first-of-type tr:nth-child(4) td {
 }
 
 
-/* Lecture/Lab list becomes the colored box */
+/* Lecture/Lab colored box */
 
 body > table:first-of-type tr:nth-child(4) ul {
     background: linear-gradient(
@@ -328,7 +306,7 @@ body > table:first-of-type tr:nth-child(4) li:last-child {
 }
 
 
-/* Office hours becomes its own clean box */
+/* Office Hours box */
 
 body > table:first-of-type tr:nth-child(4) p {
     background-color: #ffffff !important;
@@ -356,6 +334,7 @@ body > table:first-of-type tr:nth-child(4) p b {
     font-size: 19px;
 }
 
+
 /* =========================================================
    6. COURSE POLICY
    ========================================================= */
@@ -382,6 +361,54 @@ body > table:first-of-type tr:nth-child(4) p b {
     border-radius: 0 !important;
 }
 
+
+/* Course Policy content */
+
+body > table:first-of-type tr:nth-child(5) ul {
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fbff
+    ) !important;
+
+    border: 1px solid #e2e8f0;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 14px;
+
+    padding: 25px 30px 25px 50px;
+
+    margin: 20px 0 30px 0 !important;
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.07);
+}
+
+
+body > table:first-of-type tr:nth-child(5) li {
+    margin-bottom: 16px !important;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+body > table:first-of-type tr:nth-child(5) li:last-child {
+    border-bottom: none;
+
+    margin-bottom: 0 !important;
+}
+
+
+/* Policy titles */
+
+body > table:first-of-type tr:nth-child(5) li b {
+    color: #1e40af !important;
+}
+
+
 /* =========================================================
    7. GO TO TOP BUTTON
    ========================================================= */
@@ -391,252 +418,3 @@ a[href="#home"] {
 
     background: linear-gradient(
         135deg,
-        #2563eb,
-        #1d4ed8
-    ) !important;
-
-    color: white !important;
-
-    padding: 7px 15px !important;
-
-    border-radius: 20px !important;
-
-    border: none !important;
-
-    text-decoration: none !important;
-
-    font-size: 13px !important;
-
-    font-weight: 700 !important;
-
-    margin-left: 8px;
-
-    box-shadow:
-        0 4px 10px rgba(37, 99, 235, 0.25);
-
-    transition: all 0.25s ease;
-}
-
-
-a[href="#home"]:hover {
-    background: linear-gradient(
-        135deg,
-        #1d4ed8,
-        #1e40af
-    ) !important;
-
-    color: white !important;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 6px 14px rgba(37, 99, 235, 0.35);
-
-    text-decoration: none !important;
-}
-
-/* =========================================================
-   8. TABLES - LECTURES / LAB / GRADING
-   ========================================================= */
-
-table[border="1"] {
-    width: 95% !important;
-
-    margin: 40px auto !important;
-
-    background-color: white !important;
-
-    border-collapse: collapse !important;
-
-    border: none !important;
-
-    border-radius: 14px !important;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 8px 22px rgba(15, 23, 42, 0.10) !important;
-}
-
-
-/* Table headers */
-
-th {
-    background: linear-gradient(
-        135deg,
-        #1e3a8a,
-        #2563eb
-    ) !important;
-
-    color: white !important;
-
-    padding: 15px 12px !important;
-
-    font-weight: 700 !important;
-
-    border: none !important;
-
-    text-align: center !important;
-}
-
-
-/* Table cells */
-
-td {
-    padding: 13px 15px !important;
-
-    border-bottom: 1px solid #e2e8f0 !important;
-}
-
-
-/* Alternating rows */
-
-table[border="1"] tr:nth-child(even) {
-    background-color: #f8fafc !important;
-}
-
-
-/* Hover */
-
-table[border="1"] tbody tr:hover {
-    background-color: #dbeafe !important;
-
-    transition: 0.2s;
-
-    box-shadow: inset 4px 0 0 #2563eb;
-}
-
-
-/* Material links */
-
-table[border="1"] a {
-    display: inline-block;
-
-    background: #eff6ff;
-
-    color: #1d4ed8 !important;
-
-    padding: 5px 10px;
-
-    border-radius: 6px;
-
-    text-decoration: none !important;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    margin: 2px;
-
-    transition: 0.2s;
-}
-
-
-table[border="1"] a:hover {
-    background: #2563eb !important;
-
-    color: white !important;
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   9. HORIZONTAL SEPARATORS
-   ========================================================= */
-
-hr {
-    border: none !important;
-
-    height: 2px !important;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #93c5fd,
-        transparent
-    ) !important;
-
-    margin: 35px 0 !important;
-}
-
-
-/* =========================================================
-   10. GENERAL LINKS
-   ========================================================= */
-
-a {
-    transition: all 0.2s ease;
-}
-
-
-/* =========================================================
-   11. RESPONSIVE DESIGN
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    body {
-        font-size: 16px !important;
-
-        padding: 10px !important;
-    }
-
-
-    h1 {
-        font-size: 27px !important;
-
-        padding: 25px 15px !important;
-    }
-
-
-    h3 {
-        font-size: 18px !important;
-    }
-
-
-    body > table:first-of-type tr:nth-child(2) td {
-        position: static;
-
-        padding: 12px !important;
-    }
-
-
-    body > table:first-of-type tr:nth-child(2) a {
-        font-size: 13px;
-
-        padding: 7px 10px;
-    }
-
-
-    body > table:first-of-type tr:nth-child(3) td,
-    body > table:first-of-type tr:nth-child(4) td {
-        padding: 22px 20px !important;
-    }
-
-
-    #about,
-    #lecture,
-    #cpolicy {
-        font-size: 22px;
-    }
-
-
-    table[border="1"] {
-        width: 100% !important;
-
-        font-size: 14px !important;
-
-        display: block;
-
-        overflow-x: auto;
-    }
-
-
-    th,
-    td {
-        padding: 9px !important;
-
-        white-space: nowrap;
-    }
-}
