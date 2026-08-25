@@ -238,7 +238,7 @@ a[href="#home"]:hover {
     text-decoration: none !important;
 }
 
-body > table:first-of-type table {
+table {
     width: 95% !important;
     margin: 40px auto !important;
     background: white !important;
@@ -251,7 +251,7 @@ body > table:first-of-type table {
         0 8px 22px rgba(15, 23, 42, 0.10) !important;
 }
 
-body > table:first-of-type table th {
+table th {
     background: linear-gradient(
         135deg,
         #1e3a8a,
@@ -264,7 +264,7 @@ body > table:first-of-type table th {
     text-align: center !important;
 }
 
-body > table:first-of-type table td {
+table td {
     padding: 13px 15px !important;
     border-bottom: 1px solid #e2e8f0 !important;
     border-left: none !important;
@@ -272,23 +272,23 @@ body > table:first-of-type table td {
     text-align: center !important;
 }
 
-body > table:first-of-type table tr:nth-child(even) {
+table tr:nth-child(even) {
     background-color: #f8fafc !important;
 }
 
-body > table:first-of-type table tr:hover {
+table tr:hover {
     background-color: #eff6ff !important;
     transition: background-color 0.2s ease !important;
 }
 
-body > table:first-of-type table a {
+table a {
     color: #2563eb !important;
     text-decoration: none !important;
     font-weight: 600 !important;
     transition: all 0.2s ease !important;
 }
 
-body > table:first-of-type table a:hover {
+table a:hover {
     color: #1d4ed8 !important;
     text-decoration: underline !important;
 }
@@ -392,15 +392,15 @@ button:hover {
         padding: 15px 20px 25px 25px !important;
     }
 
-    body > table:first-of-type table {
+    table {
         width: 100% !important;
         font-size: 14px !important;
         display: block !important;
         overflow-x: auto !important;
     }
 
-    body > table:first-of-type table th,
-    body > table:first-of-type table td {
+    table th,
+    table td {
         padding: 9px !important;
         white-space: nowrap !important;
     }
