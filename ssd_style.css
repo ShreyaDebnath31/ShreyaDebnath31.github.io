@@ -1,6 +1,6 @@
 /* =========================================================
    CS6.302 - SOFTWARE SYSTEM DEVELOPMENT
-   Custom CSS
+   CUSTOM CSS
    ========================================================= */
 
 
@@ -23,7 +23,7 @@ body {
 }
 
 
-/* Keep main page centered */
+/* Main page container */
 
 body > table {
     width: 100% !important;
@@ -42,7 +42,7 @@ body > table:first-of-type tr:first-child td {
 }
 
 
-/* Main course title */
+/* Main title */
 
 h1 {
     background: linear-gradient(
@@ -70,13 +70,13 @@ h1 {
 }
 
 
-/* Course subtitle */
+/* Subtitle */
 
 h3 {
     color: #2563eb !important;
     font-size: 22px !important;
     margin: 8px 0 !important;
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 
@@ -107,27 +107,27 @@ body > table:first-of-type tr:nth-child(2) td {
 /* Navigation links */
 
 body > table:first-of-type tr:nth-child(2) a {
-    display: inline-block;
+    display: inline-block !important;
 
     color: #1e3a8a !important;
 
-    background: #eff6ff;
+    background: #eff6ff !important;
 
-    border: 1px solid #bfdbfe;
+    border: 1px solid #bfdbfe !important;
 
-    padding: 9px 16px;
+    padding: 9px 16px !important;
 
-    margin: 4px;
+    margin: 4px !important;
 
-    border-radius: 22px;
+    border-radius: 22px !important;
 
     text-decoration: none !important;
 
-    font-size: 15px;
+    font-size: 15px !important;
 
-    font-weight: 700;
+    font-weight: 700 !important;
 
-    transition: all 0.25s ease;
+    transition: all 0.25s ease !important;
 }
 
 
@@ -138,12 +138,12 @@ body > table:first-of-type tr:nth-child(2) a:hover {
 
     color: white !important;
 
-    border-color: #2563eb;
+    border-color: #2563eb !important;
 
     transform: translateY(-3px);
 
     box-shadow:
-        0 5px 12px rgba(37, 99, 235, 0.30);
+        0 5px 12px rgba(37, 99, 235, 0.30) !important;
 }
 
 
@@ -154,36 +154,36 @@ body > table:first-of-type tr:nth-child(2) a:hover {
 /* About heading */
 
 #about {
-    display: block;
+    display: block !important;
 
     color: #172554 !important;
 
-    font-size: 28px;
+    font-size: 28px !important;
 
-    font-weight: 700;
+    font-weight: 700 !important;
 
-    padding-bottom: 8px;
+    padding-bottom: 8px !important;
 
-    margin-bottom: 18px;
+    margin-bottom: 18px !important;
 
-    border-bottom: 3px solid #bfdbfe;
+    border-bottom: 3px solid #bfdbfe !important;
 
-    background: none !important;
+    background: transparent !important;
 
     box-shadow: none !important;
 
     border-radius: 0 !important;
 
-    position: relative;
+    position: relative !important;
 
-    z-index: 2;
+    z-index: 2 !important;
 }
 
 
-/* About content */
+/* About paragraph */
 
 body > table:first-of-type tr:nth-child(3) td p {
-    position: relative;
+    position: relative !important;
 
     padding: 0 25px 25px 25px !important;
 
@@ -193,9 +193,9 @@ body > table:first-of-type tr:nth-child(3) td p {
 
     box-shadow: none !important;
 
-    isolation: isolate;
+    line-height: 1.8 !important;
 
-    line-height: 1.8;
+    isolation: isolate !important;
 }
 
 
@@ -233,34 +233,40 @@ body > table:first-of-type tr:nth-child(3) td p::after {
    5. LECTURE / LAB / OFFICE HOURS
    ========================================================= */
 
-/* Main heading */
+/* Lecture/Lab heading */
 
 #lecture {
-    display: block;
+    display: block !important;
 
     color: #172554 !important;
 
-    font-size: 28px;
+    font-size: 28px !important;
 
-    font-weight: 700;
+    font-weight: 700 !important;
 
-    padding-bottom: 8px;
+    padding-bottom: 8px !important;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px !important;
 
-    border-bottom: 3px solid #bfdbfe;
+    border-bottom: 3px solid #bfdbfe !important;
 
-    background: none !important;
+    background: transparent !important;
 
     box-shadow: none !important;
 
     border-radius: 0 !important;
+
+    position: relative !important;
+
+    z-index: 2 !important;
 }
 
 
-/* Main lecture/lab content area */
+/* Lecture/Lab introductory content */
 
-body > table:first-of-type tr:nth-child(4) td {
+body > table:first-of-type tr:nth-child(4) td > p:first-of-type {
+    position: relative !important;
+
     padding: 0 25px 25px 25px !important;
 
     background: transparent !important;
@@ -268,34 +274,64 @@ body > table:first-of-type tr:nth-child(4) td {
     border: none !important;
 
     box-shadow: none !important;
+
+    line-height: 1.8 !important;
+
+    isolation: isolate !important;
 }
 
 
-/* Lecture/Lab colored box */
+/* Colored box behind lecture/lab introduction */
 
-body > table:first-of-type tr:nth-child(4) ul {
+body > table:first-of-type tr:nth-child(4) td > p:first-of-type::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 58px;
+    bottom: 0;
+
     background: linear-gradient(
         135deg,
         #eff6ff,
         #f8fbff
-    ) !important;
+    );
 
     border: 1px solid #bfdbfe;
 
-    border-left: 5px solid #2563eb;
-
     border-radius: 14px;
-
-    padding: 22px 30px 22px 45px;
-
-    margin: 20px 0 25px 0 !important;
 
     box-shadow:
         0 6px 18px rgba(37, 99, 235, 0.08);
+
+    z-index: -1;
 }
 
 
-/* Individual lecture/lab items */
+/* Lecture/Lab list */
+
+body > table:first-of-type tr:nth-child(4) td ul {
+    background: white !important;
+
+    border: 1px solid #dbeafe !important;
+
+    border-left: 5px solid #2563eb !important;
+
+    border-radius: 12px !important;
+
+    padding: 18px 30px 18px 45px !important;
+
+    margin: 20px 0 !important;
+
+    box-shadow:
+        0 4px 12px rgba(37, 99, 235, 0.06) !important;
+}
+
+
+/* List items */
 
 body > table:first-of-type tr:nth-child(4) li {
     margin-bottom: 12px !important;
@@ -306,32 +342,34 @@ body > table:first-of-type tr:nth-child(4) li:last-child {
 }
 
 
-/* Office Hours box */
+/* Office Hours paragraph */
 
-body > table:first-of-type tr:nth-child(4) p {
-    background-color: #ffffff !important;
+body > table:first-of-type tr:nth-child(4) td > p:last-of-type {
+    background: white !important;
 
-    border: 1px solid #e2e8f0;
+    border: 1px solid #dbeafe !important;
 
-    border-radius: 14px;
+    border-left: 5px solid #60a5fa !important;
 
-    padding: 20px 25px !important;
+    border-radius: 12px !important;
+
+    padding: 18px 25px !important;
 
     margin-top: 25px !important;
 
     box-shadow:
-        0 5px 15px rgba(15, 23, 42, 0.06);
+        0 4px 12px rgba(15, 23, 42, 0.06) !important;
 
-    line-height: 1.8;
+    line-height: 1.8 !important;
 }
 
 
-/* Office Hours label */
+/* Office Hours title */
 
-body > table:first-of-type tr:nth-child(4) p b {
+body > table:first-of-type tr:nth-child(4) td > p:last-of-type b {
     color: #1e3a8a !important;
 
-    font-size: 19px;
+    font-size: 20px !important;
 }
 
 
@@ -340,21 +378,21 @@ body > table:first-of-type tr:nth-child(4) p b {
    ========================================================= */
 
 #cpolicy {
-    display: inline-block;
+    display: block !important;
 
     color: #172554 !important;
 
-    font-size: 28px;
+    font-size: 28px !important;
 
-    font-weight: 700;
+    font-weight: 700 !important;
 
-    padding-bottom: 8px;
+    padding-bottom: 8px !important;
 
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 
-    border-bottom: 3px solid #bfdbfe;
+    border-bottom: 3px solid #bfdbfe !important;
 
-    background: none !important;
+    background: transparent !important;
 
     box-shadow: none !important;
 
@@ -362,41 +400,43 @@ body > table:first-of-type tr:nth-child(4) p b {
 }
 
 
-/* Course Policy content */
+/* Course Policy list */
 
-body > table:first-of-type tr:nth-child(5) ul {
+body > table:first-of-type tr:nth-child(5) td ul {
     background: linear-gradient(
         135deg,
-        #ffffff,
+        #eff6ff,
         #f8fbff
     ) !important;
 
-    border: 1px solid #e2e8f0;
+    border: 1px solid #bfdbfe !important;
 
-    border-left: 5px solid #2563eb;
+    border-left: 5px solid #2563eb !important;
 
-    border-radius: 14px;
+    border-radius: 14px !important;
 
-    padding: 25px 30px 25px 50px;
+    padding: 25px 35px 25px 50px !important;
 
     margin: 20px 0 30px 0 !important;
 
     box-shadow:
-        0 6px 18px rgba(15, 23, 42, 0.07);
+        0 6px 18px rgba(37, 99, 235, 0.08) !important;
 }
 
 
-body > table:first-of-type tr:nth-child(5) li {
-    margin-bottom: 16px !important;
+/* Policy items */
 
-    padding-bottom: 12px;
+body > table:first-of-type tr:nth-child(5) td ul li {
+    margin-bottom: 18px !important;
 
-    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px !important;
+
+    border-bottom: 1px solid #dbeafe !important;
 }
 
 
-body > table:first-of-type tr:nth-child(5) li:last-child {
-    border-bottom: none;
+body > table:first-of-type tr:nth-child(5) td ul li:last-child {
+    border-bottom: none !important;
 
     margin-bottom: 0 !important;
 }
@@ -404,8 +444,8 @@ body > table:first-of-type tr:nth-child(5) li:last-child {
 
 /* Policy titles */
 
-body > table:first-of-type tr:nth-child(5) li b {
-    color: #1e40af !important;
+body > table:first-of-type tr:nth-child(5) td ul li b {
+    color: #1e3a8a !important;
 }
 
 
@@ -414,7 +454,273 @@ body > table:first-of-type tr:nth-child(5) li b {
    ========================================================= */
 
 a[href="#home"] {
-    display: inline-block;
+    display: inline-block !important;
 
     background: linear-gradient(
         135deg,
+        #2563eb,
+        #1d4ed8
+    ) !important;
+
+    color: white !important;
+
+    padding: 7px 16px !important;
+
+    border-radius: 20px !important;
+
+    border: none !important;
+
+    text-decoration: none !important;
+
+    font-size: 13px !important;
+
+    font-weight: 700 !important;
+
+    margin-left: 8px !important;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.25) !important;
+
+    transition: all 0.25s ease !important;
+}
+
+
+a[href="#home"]:hover {
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #1e40af
+    ) !important;
+
+    color: white !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 6px 14px rgba(37, 99, 235, 0.35) !important;
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   8. TABLES
+   ========================================================= */
+
+table[border="1"] {
+    width: 95% !important;
+
+    margin: 40px auto !important;
+
+    background-color: white !important;
+
+    border-collapse: collapse !important;
+
+    border: none !important;
+
+    border-radius: 14px !important;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 22px rgba(15, 23, 42, 0.10) !important;
+}
+
+
+/* Table headers */
+
+table[border="1"] th {
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    ) !important;
+
+    color: white !important;
+
+    padding: 15px 12px !important;
+
+    font-weight: 700 !important;
+
+    border: none !important;
+
+    text-align: center !important;
+}
+
+
+/* Table cells */
+
+table[border="1"] td {
+    padding: 13px 15px !important;
+
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+
+/* Alternating rows */
+
+table[border="1"] tr:nth-child(even) {
+    background-color: #f8fafc !important;
+}
+
+
+/* Row hover */
+
+table[border="1"] tr:hover {
+    background-color: #dbeafe !important;
+
+    transition: 0.2s ease;
+
+    box-shadow: inset 4px 0 0 #2563eb;
+}
+
+
+/* Material links */
+
+table[border="1"] a {
+    display: inline-block !important;
+
+    background: #eff6ff !important;
+
+    color: #1d4ed8 !important;
+
+    padding: 5px 10px !important;
+
+    border-radius: 6px !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px !important;
+
+    font-weight: 700 !important;
+
+    margin: 2px !important;
+
+    transition: 0.2s ease !important;
+}
+
+
+table[border="1"] a:hover {
+    background: #2563eb !important;
+
+    color: white !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   9. GENERAL LINKS
+   ========================================================= */
+
+a {
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   10. HORIZONTAL LINES
+   ========================================================= */
+
+hr {
+    border: none !important;
+
+    height: 2px !important;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #93c5fd,
+        transparent
+    ) !important;
+
+    margin: 35px 0 !important;
+}
+
+
+/* =========================================================
+   11. RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px !important;
+
+        padding: 10px !important;
+    }
+
+
+    h1 {
+        font-size: 27px !important;
+
+        padding: 25px 15px !important;
+    }
+
+
+    h3 {
+        font-size: 18px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(2) td {
+        position: static;
+
+        padding: 12px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(2) a {
+        font-size: 13px !important;
+
+        padding: 7px 10px !important;
+    }
+
+
+    #about,
+    #lecture,
+    #cpolicy {
+        font-size: 22px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(3) td p,
+    body > table:first-of-type tr:nth-child(4) td p {
+        padding-left: 18px !important;
+
+        padding-right: 18px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(4) td ul {
+        padding-left: 35px !important;
+
+        padding-right: 20px !important;
+    }
+
+
+    body > table:first-of-type tr:nth-child(5) td ul {
+        padding-left: 35px !important;
+
+        padding-right: 20px !important;
+    }
+
+
+    table[border="1"] {
+        width: 100% !important;
+
+        font-size: 14px !important;
+
+        display: block;
+
+        overflow-x: auto;
+    }
+
+
+    table[border="1"] th,
+    table[border="1"] td {
+        padding: 9px !important;
+
+        white-space: nowrap;
+    }
+}
